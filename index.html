@@ -1,20 +1,323 @@
-<!DOCTYPE html>
-<html lang="lt">
-<head>
-    <!-- ROKAS -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML žymių demonstracija</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>HTML žymių pavyzdžiai</h1>
-    
-    <p>Čia yra tekstas su <b>paryškintu</b> tekstu.</p>
-    
-    <p>Čia yra tekstas su <i>pasvirusiu</i> tekstu.</p>
-    
-    <p>Čia yra tekstas su <u>pabrauktu</u> tekstu.</p>
-    
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rokas Bubinas - UI/UX Designer & Web Developer</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600,700&family=Poppins:wght@400,500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" id="main-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Rokas Bubinas</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#apie">Apie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Darbai</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#paslaugos">Paslaugos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sections -->
+        <main>
+            <!-- Apie Mane Section -->
+            <section id="apie" class="section">
+                <div class="container my-5">
+                    <h2 class="section-title">Apie mane</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <img
+                                src="images/profile.jpg"
+                                alt="Rokas Bubinas"
+                                class="img-fluid rounded-circle mb-3"
+                            />
+                        </div>
+                        <div class="col-md-8">
+                            <h3>Rokas Bubinas</h3>
+                            <p>
+                                Esu IT specialistas, turintis daugiau nei 30
+                                metų patirtį programavimo srityje.
+                                Specializuojuosi web technologijose ir nuolat
+                                tobulinuosi.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        <strong>Gimimo data:</strong> 2002-12-17
+                                    </p>
+                                    <p>
+                                        <strong>Telefono numeris:</strong> +370
+                                        659 99972
+                                    </p>
+                                    <p>
+                                        <strong>El. paštas:</strong>
+                                        rokas.bubinas@stud.vilniustech.lt
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        <strong>Miestas:</strong> Vilnius,
+                                        Lietuva
+                                    </p>
+                                    <p>
+                                        <strong>Profesija:</strong> Web
+                                        programuotojas
+                                    </p>
+                                    <p>
+                                        <strong>Darbų platforma:</strong>
+                                        Freelancer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profesinė Patirtis Section -->
+            <section id="resume" class="section">
+                <div class="container my-5">
+                    <h2 class="section-title">Profesinė patirtis</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Išsilavinimas</h3>
+                            <div class="resume-item">
+                                <h4>Dirbtinio intelekto sistemų bakalauras</h4>
+                                <p>2023 - 2027</p>
+                                <p>Vilnius Tech</p>
+                            </div>
+                            <div class="resume-item">
+                                <h4>Magistro laipsnis</h4>
+                                <p>2027 - 2031</p>
+                                <p>Vilnius Tech</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Darbo patirtis</h3>
+                            <div class="resume-item">
+                                <h4>Web programuotojas</h4>
+                                <p>2021 - Dabar</p>
+                                <p>UAB "IT Sprendimai", Vilnius</p>
+                                <ul>
+                                    <li>Kuriu responsive web sistemas</li>
+                                    <li>Diegiamų sprendimų testavimas</li>
+                                    <li>Dokumentacijos rengimas</li>
+                                </ul>
+                            </div>
+                            <div class="resume-item">
+                                <h4>Praktikantas</h4>
+                                <p>2019 - 2021</p>
+                                <p>UAB "Programų sistemos"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="section">
+                <div class="container my-5">
+                    <h2 class="section-title">Mano darbai</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img
+                                    src="images/amazon.png"
+                                    class="card-img-top"
+                                    alt="Projektas 1"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">Amazon.com</h5>
+                                    <p class="card-text">
+                                        E. prekybos platforma, kurioje
+                                        parduodama daug produktų.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img
+                                    src="images/wolt.png"
+                                    class="card-img-top"
+                                    alt="Projektas 2"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">Wolt</h5>
+                                    <p class="card-text">
+                                        Programa skirta užsakymams iš restoranų
+                                        ir maisto transportui.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img
+                                    src="images/linkedin.png"
+                                    class="card-img-top"
+                                    alt="Projektas 3"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">LinkedIn.com</h5>
+                                    <p class="card-text">
+                                        Į verslą ir užimtumą orientuota
+                                        socialinės žiniasklaidos platforma.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Paslaugos Section -->
+            <section id="paslaugos" class="section">
+                <div class="container my-5">
+                    <h2 class="section-title">Mano Paslaugos</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Web Kūrimas</h5>
+                                    <p class="card-text">
+                                        Profesionalus svetainių kūrimas
+                                        naudojant naujausias technologijas
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Programavimas</h5>
+                                    <p class="card-text">
+                                        Pritaikomųjų programų ir specializuotų
+                                        sprendimų kūrimas
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Konsultacijos</h5>
+                                    <p class="card-text">
+                                        IT sprendimų ir technologinių
+                                        konsultacijų teikimas
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Kontaktai Section -->
+            <section id="kontaktai" class="section">
+                <div class="container my-5">
+                    <h2 class="section-title">Kontaktai</h2>
+                    <p class="text-center mb-4">
+                        Jei turite klausimų arba norite susiekti, užpildykite
+                        žemiau esančią formą.
+                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label"
+                                        >Jūsų vardas</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="name"
+                                        placeholder="Įveskite savo vardą"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label"
+                                        >El. paštas</label
+                                    >
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Įveskite savo el. paštą"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label"
+                                        >Žinutė</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="message"
+                                        rows="5"
+                                        placeholder="Rašykite savo žinutę čia..."
+                                        required
+                                    ></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary"
+                                    >
+                                        Siųsti
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Theme Toggle and Footer -->
+        <div class="section container text-center my-5">
+            <button id="theme-toggle" class="btn btn-primary">
+                Šviesus/Tamsus režimas
+            </button>
+        </div>
+        <footer class="section container text-center my-5">
+            &copy; 2024 Rokas Bubinas. Visos teisės saugomos.
+        </footer>
+
+        <script src="functions.js"></script>
+    </body>
 </html>
