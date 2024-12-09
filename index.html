@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="lt">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Rokas Bubinas - UI/UX Designer & Web Developer</title>
+
+        <!-- stiliai & skriptai -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"
@@ -15,20 +17,22 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600,700&family=Poppins:wght@400,500&display=swap"
             rel="stylesheet"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
     </head>
     <body>
+        <!-- laikrodis -->
+        <div id="clock" class="text-center my-3">00:00:00</div>
+
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg" id="main-navbar">
             <div class="container">
                 <a class="navbar-brand" href="#">Rokas Bubinas</a>
+                <p>\[ f(a) = \frac{1}{2\pi i} \oint \frac{f(z)}{z - a} dz \]</p>
                 <button
                     class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,9 +55,8 @@
             </div>
         </nav>
 
-        <!-- Sections -->
         <main>
-            <!-- Apie Mane Section -->
+            <!-- Sections -->
             <section id="apie" class="section">
                 <div class="container my-5">
                     <h2 class="section-title">Apie mane</h2>
@@ -106,8 +109,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Profesinė Patirtis Section -->
             <section id="resume" class="section">
                 <div class="container my-5">
                     <h2 class="section-title">Profesinė patirtis</h2>
@@ -146,8 +147,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Portfolio Section -->
             <section id="portfolio" class="section">
                 <div class="container my-5">
                     <h2 class="section-title">Mano darbai</h2>
@@ -203,8 +202,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Paslaugos Section -->
             <section id="paslaugos" class="section">
                 <div class="container my-5">
                     <h2 class="section-title">Mano Paslaugos</h2>
@@ -245,8 +242,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Kontaktai Section -->
             <section id="kontaktai" class="section">
                 <div class="container my-5">
                     <h2 class="section-title">Kontaktai</h2>
@@ -308,13 +303,12 @@
             </section>
         </main>
 
-        <!-- Theme Toggle and Footer -->
-        <div class="section container text-center my-5">
+        <div class="container text-center my-5">
             <button id="theme-toggle" class="btn btn-primary">
                 Šviesus/Tamsus režimas
             </button>
         </div>
-        <footer class="section container text-center my-5">
+        <footer class="text-center my-5">
             &copy; 2024 Rokas Bubinas. Visos teisės saugomos.
         </footer>
 
