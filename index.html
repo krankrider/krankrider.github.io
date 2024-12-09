@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Rokas Bubinas - UI/UX Designer & Web Developer</title>
+        <title>Rokas Bubinas - UI/UX Dizaineris & Web Developeris</title>
 
         <!-- stiliai & skriptai -->
         <link
@@ -28,6 +28,7 @@
             <div class="container">
                 <a class="navbar-brand" href="#">Rokas Bubinas</a>
                 <p>\[ f(a) = \frac{1}{2\pi i} \oint \frac{f(z)}{z - a} dz \]</p>
+
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -240,8 +241,49 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <h3>Vaizdo įrašas apie paslaugas</h3>
+                            <video width="100%" controls>
+                                <source
+                                    src="./images/peanut.mp4"
+                                    type="video/mp4"
+                                />
+                                Jūsų naršyklė nepalaiko video tag'o.
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <h3>Peržiūrėkite mūsų YouTube vaizdo įrašą</h3>
+                            <iframe
+                                width="100%"
+                                height="315"
+                                src="https://www.youtube.com/embed/eRBOgtp0Hac?si=gOQpkn_eQkWPAZI8"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <h3>Garso įrašas apie paslaugas</h3>
+                            <audio controls>
+                                <source
+                                    src="./sounds/peanut.mp3"
+                                    type="audio/mp3"
+                                />
+                                Jūsų naršyklė nepalaiko audio tag'o.
+                            </audio>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section id="kontaktai" class="section">
                 <div class="container my-5">
                     <h2 class="section-title">Kontaktai</h2>
@@ -251,7 +293,7 @@
                     </p>
                     <div class="row justify-content-center">
                         <div class="col-md-8">
-                            <form>
+                            <form id="contactForm">
                                 <div class="mb-3">
                                     <label for="name" class="form-label"
                                         >Jūsų vardas</label
@@ -277,6 +319,29 @@
                                     />
                                 </div>
                                 <div class="mb-3">
+                                    <label for="phone" class="form-label"
+                                        >Telefono numeris</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="phone"
+                                        placeholder="Įveskite savo telefono numerį"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label"
+                                        >Adresas</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="address"
+                                        placeholder="Įveskite savo adresą"
+                                    />
+                                </div>
+                                <div class="mb-3">
                                     <label for="message" class="form-label"
                                         >Žinutė</label
                                     >
@@ -288,15 +353,74 @@
                                         required
                                     ></textarea>
                                 </div>
+                                <div class="mb-4">
+                                    <h5>Įvertinkite (1-10):</h5>
+                                    <label for="q1">Savo html įgudžius:</label>
+                                    <input
+                                        type="range"
+                                        id="q1"
+                                        min="1"
+                                        max="10"
+                                        step="1"
+                                        value="5"
+                                        class="form-range"
+                                    />
+                                    <label for="q2">Savo css įgudžius:</label>
+                                    <input
+                                        type="range"
+                                        id="q2"
+                                        min="1"
+                                        max="10"
+                                        step="1"
+                                        value="5"
+                                        class="form-range"
+                                    />
+                                    <label for="q3"
+                                        >Savo javascript įgudžius:</label
+                                    >
+                                    <input
+                                        type="range"
+                                        id="q3"
+                                        min="1"
+                                        max="10"
+                                        step="1"
+                                        value="5"
+                                        class="form-range"
+                                    />
+                                    <label for="q4">Savo sql įgudžius:</label>
+                                    <input
+                                        type="range"
+                                        id="q4"
+                                        min="1"
+                                        max="10"
+                                        step="1"
+                                        value="5"
+                                        class="form-range"
+                                    />
+                                    <label for="q5"
+                                        >Savo art design įgudžius:</label
+                                    >
+                                    <input
+                                        type="range"
+                                        id="q5"
+                                        min="1"
+                                        max="10"
+                                        step="1"
+                                        value="5"
+                                        class="form-range"
+                                    />
+                                </div>
                                 <div class="text-center">
                                     <button
-                                        type="submit"
+                                        type="button"
                                         class="btn btn-primary"
+                                        onclick="submitForm()"
                                     >
                                         Siųsti
                                     </button>
                                 </div>
                             </form>
+                            <div id="results" class="mt-4"></div>
                         </div>
                     </div>
                 </div>
@@ -308,6 +432,52 @@
                 Šviesus/Tamsus režimas
             </button>
         </div>
+
+        <section id="random-svg" class="section">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <svg
+                            class="svg-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 200 200"
+                        >
+                            <defs>
+                                <linearGradient
+                                    id="grad1"
+                                    x1="0%"
+                                    y1="0%"
+                                    x2="100%"
+                                    y2="100%"
+                                >
+                                    <stop
+                                        offset="0%"
+                                        style="
+                                            stop-color: rgb(0, 255, 0);
+                                            stop-opacity: 1;
+                                        "
+                                    />
+                                    <stop
+                                        offset="100%"
+                                        style="
+                                            stop-color: rgb(255, 0, 0);
+                                            stop-opacity: 1;
+                                        "
+                                    />
+                                </linearGradient>
+                            </defs>
+                            <circle
+                                cx="100"
+                                cy="100"
+                                r="80"
+                                fill="url(#grad1)"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer class="text-center my-5">
             &copy; 2024 Rokas Bubinas. Visos teisės saugomos.
             <div class="social-icons mt-3">
